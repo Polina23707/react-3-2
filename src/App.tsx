@@ -1,4 +1,3 @@
-import './App.css'
 import ListingConst from './components/Listing';
 import data from './etsy.json';
 
