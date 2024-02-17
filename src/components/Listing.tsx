@@ -1,7 +1,6 @@
 import ListingType from "../types/ListingType";
 
 const ListingConst = function Listing (items: ListingType) {
-
   function title() {
     let title = items.title;
     if (!!title && title.length > 50) {
@@ -21,6 +20,10 @@ const ListingConst = function Listing (items: ListingType) {
   }
 
   function quantity() {
+    if (!items.quantity) {
+      return '0';
+    }
+
     if (items.quantity <= 10) {
       return 'item-quantity level-low';
     } else if (items.quantity <= 20) {
